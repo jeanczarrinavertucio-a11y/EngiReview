@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>EngiReview — Structural Engineering Reviewer</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       APP
+  ====================================================== -->
+
+  <div id="app">
+
+
+    <!-- ===================================================
+         WELCOME / REGISTRATION PAGE
+    ==================================================== -->
+
+    <section
+      id="welcomePage"
+      class="page active-page"
+    >
+
+      <div class="welcome-container">
+
+        <div class="welcome-card">
+
+          <div class="brand-mark">
+            🏗️
+          </div>
+
+          <span class="eyebrow">
+            STRUCTURAL ENGINEERING REVIEWER
+          </span>
+
+          <h1>
+            Build Your<br>
+            Engineering Future.
+          </h1>
+
+          <p class="welcome-text">
+            A personal study space for Steel Design,
+            Reinforced Concrete, and Prestressed Concrete.
+          </p>
+
+          <div class="name-form">
+
+            <label for="studentName">
+              What's your name, future engineer?
+            </label>
+
+            <input
+              id="studentName"
+              type="text"
+              placeholder="Enter your name"
+              autocomplete="name"
+            >
+
+            <button
+              class="primary-btn"
+              onclick="registerStudent()"
+            >
+              Start Reviewing
+              <span>→</span>
+            </button>
+
+          </div>
+
+          <div class="welcome-note">
+            💾 Your progress is saved locally on this device.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         HOME PAGE
+    ==================================================== -->
+
+    <section
+      id="homePage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <!-- Header -->
+
+        <header class="main-header">
+
+          <div class="brand">
+            <div class="brand-icon">
+              🏗️
+            </div>
+
+            <div>
+              <strong>EngiReview</strong>
+              <span>Structural Engineering</span>
+            </div>
+          </div>
+
+          <button
+            class="header-btn"
+            onclick="showPage('subjectsPage')"
+          >
+            📚 Subjects
+          </button>
+
+        </header>
+
+
+        <!-- Hero -->
+
+        <div class="home-hero">
+
+          <div>
+
+            <span class="eyebrow">
+              WELCOME BACK
+            </span>
+
+            <h1>
+              HI FUTURE ENGR.
+              <span id="homeStudentName">
+                ENGINEER
+              </span>
+            </h1>
+
+            <p>
+              What would you like to work on today?
+            </p>
+
+          </div>
+
+          <div class="hero-decoration">
+            <div class="blueprint-grid"></div>
+            <span>Σ</span>
+          </div>
+
+        </div>
+
+
+        <!-- Quick Actions -->
+
+        <div class="section-heading">
+
+          <div>
+            <span class="eyebrow">
+              YOUR STUDY SPACE
+            </span>
+
+            <h2>
+              What would you like to do?
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="action-grid">
+
+
+          <!-- Subjects -->
+
+          <button
+            class="big-action"
+            onclick="showPage('subjectsPage')"
+          >
+
+            <span class="action-icon">
+              📚
+            </span>
+
+            <div>
+              <strong>
+                View Subjects
+              </strong>
+
+              <small>
+                Explore engineering topics
+              </small>
+            </div>
+
+            <span class="action-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- Quiz -->
+
+          <button
+            class="big-action"
+            onclick="showPage('quizPage')"
+          >
+
+            <span class="action-icon">
+              📝
+            </span>
+
+            <div>
+              <strong>
+                Take Quiz / Exams
+              </strong>
+
+              <small>
+                Test your engineering knowledge
+              </small>
+            </div>
+
+            <span class="action-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- AI Coach -->
+
+          <button
+            class="big-action"
+            onclick="showPage('coachPage')"
+          >
+
+            <span class="action-icon">
+              🧠
+            </span>
+
+            <div>
+              <strong>
+                AI Study Coach
+              </strong>
+
+              <small>
+                Analyze your performance
+              </small>
+            </div>
+
+            <span class="action-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- Smart Practice -->
+
+          <button
+            class="big-action"
+            onclick="showPage('adaptivePage')"
+          >
+
+            <span class="action-icon">
+              🎯
+            </span>
+
+            <div>
+              <strong>
+                Smart Practice
+              </strong>
+
+              <small>
+                Practice your weakest topics
+              </small>
+            </div>
+
+            <span class="action-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- Exam Mode -->
+
+          <button
+            class="big-action"
+            onclick="showPage('examPage')"
+          >
+
+            <span class="action-icon">
+              🧪
+            </span>
+
+            <div>
+              <strong>
+                Engineering Exam Mode
+              </strong>
+
+              <small>
+                Take a full mock examination
+              </small>
+            </div>
+
+            <span class="action-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- AI Tutor -->
+
+          <button
+            class="big-action"
+            onclick="showPage('tutorPage')"
+          >
+
+            <span class="action-icon">
+              🤖
+            </span>
+
+            <div>
+              <strong>
+                AI Engineering Tutor
+              </strong>
+
+              <small>
+                Learn with guided engineering help
+              </small>
+            </div>
+
+            <span class="action-arrow">
+              →
+            </span>
+
+          </button>
+
+        </div>
+
+
+        <!-- Engineering Dashboard -->
+
+        <div class="engineering-dashboard">
+
+          <div class="dashboard-header">
+
+            <div>
+
+              <span class="eyebrow">
+                YOUR ENGINEERING JOURNEY
+              </span>
+
+              <h2>
+                Progress Overview
+              </h2>
+
+            </div>
+
+            <button
+              class="secondary-btn"
+              onclick="showPage('coachPage')"
+            >
+              🧠 View Analysis
+            </button>
+
+          </div>
+
+
+          <div class="engineering-stat-grid">
+
+
+            <div class="engineering-stat">
+
+              <span>📝</span>
+
+              <small>
+                Quiz Attempts
+              </small>
+
+              <strong id="homeQuizAttempts">
+                0
+              </strong>
+
+            </div>
+
+
+            <div class="engineering-stat">
+
+              <span>🎯</span>
+
+              <small>
+                Average Accuracy
+              </small>
+
+              <strong id="homeAccuracy">
+                —
+              </strong>
+
+            </div>
+
+
+            <div class="engineering-stat">
+
+              <span>📐</span>
+
+              <small>
+                Problems Solved
+              </small>
+
+              <strong id="homeProblemsSolved">
+                0
+              </strong>
+
+            </div>
+
+
+            <div class="engineering-stat">
+
+              <span>🤖</span>
+
+              <small>
+                Tutor Sessions
+              </small>
+
+              <strong id="homeTutorSessions">
+                0
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Reset / Profile -->
+
+        <div class="home-footer-actions">
+
+          <button
+            class="text-btn"
+            onclick="editStudentName()"
+          >
+            ✏️ Change Name
+          </button>
+
+          <button
+            class="text-btn danger-text"
+            onclick="resetAllData()"
+          >
+            🗑️ Reset All Data
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SUBJECTS PAGE
+    ==================================================== -->
+
+    <section
+      id="subjectsPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              ENGINEERING REVIEW
+            </span>
+
+            <h1>
+              Subjects
+            </h1>
+
+            <p>
+              Choose a subject and start reviewing.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+
+          <!-- STEEL -->
+
+          <div class="subject-card">
+
+            <div class="subject-card-header">
+
+              <div class="subject-icon steel-icon">
+                ⚙️
+              </div>
+
+              <div>
+
+                <span class="subject-label">
+                  STRUCTURAL STEEL
+                </span>
+
+                <h2>
+                  Steel Design
+                </h2>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Study the behavior, analysis, and design
+              of structural steel members and connections.
+            </p>
+
+
+            <div
+              id="steelTopics"
+              class="topic-list"
+            >
+            </div>
+
+
+            <button
+              class="secondary-btn full-btn"
+              onclick="toggleSubjectTopics('steelTopics', this)"
+            >
+              View Topics
+              <span>↓</span>
+            </button>
+
+          </div>
+
+
+          <!-- REINFORCED CONCRETE -->
+
+          <div class="subject-card">
+
+            <div class="subject-card-header">
+
+              <div class="subject-icon concrete-icon">
+                🧱
+              </div>
+
+              <div>
+
+                <span class="subject-label">
+                  REINFORCED CONCRETE
+                </span>
+
+                <h2>
+                  Reinforced Concrete
+                </h2>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Review reinforced concrete behavior,
+              flexure, shear, columns, slabs, and foundations.
+            </p>
+
+
+            <div
+              id="reinforcedConcreteTopics"
+              class="topic-list"
+            >
+            </div>
+
+
+            <button
+              class="secondary-btn full-btn"
+              onclick="toggleSubjectTopics('reinforcedConcreteTopics', this)"
+            >
+              View Topics
+              <span>↓</span>
+            </button>
+
+          </div>
+
+
+          <!-- PRESTRESSED -->
+
+          <div class="subject-card">
+
+            <div class="subject-card-header">
+
+              <div class="subject-icon prestress-icon">
+                🪢
+              </div>
+
+              <div>
+
+                <span class="subject-label">
+                  PRESTRESSED CONCRETE
+                </span>
+
+                <h2>
+                  Prestressed Concrete
+                </h2>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Explore prestressing systems, losses,
+              flexural behavior, shear, and serviceability.
+            </p>
+
+
+            <div
+              id="prestressedConcreteTopics"
+              class="topic-list"
+            >
+            </div>
+
+
+            <button
+              class="secondary-btn full-btn"
+              onclick="toggleSubjectTopics('prestressedConcreteTopics', this)"
+            >
+              View Topics
+              <span>↓</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         REVIEW PANEL
+    ==================================================== -->
+
+    <div
+      id="reviewPanel"
+      class="review-panel"
+    >
+
+      <div class="review-panel-header">
+
+        <button
+          class="close-btn"
+          onclick="closeReviewPanel()"
+        >
+          ×
+        </button>
+
+        <div>
+
+          <span class="eyebrow">
+            TOPIC REVIEW
+          </span>
+
+          <h2 id="reviewPanelTitle">
+            Topic
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="reviewPanelContent"
+        class="review-panel-content"
+      >
+
+        <div class="empty-state">
+          Select a topic to begin reviewing.
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="panelOverlay"
+      class="panel-overlay"
+      onclick="closeReviewPanel()"
+    ></div>
+
+
+    <!-- ===================================================
+         QUIZ PAGE
+    ==================================================== -->
+
+    <section
+      id="quizPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              TEST YOUR KNOWLEDGE
+            </span>
+
+            <h1>
+              Quiz Center
+            </h1>
+
+            <p>
+              Practice concepts and test your understanding.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="quiz-selection-grid">
+
+
+          <div class="quiz-option-card">
+
+            <div class="quiz-option-icon">
+              📚
+            </div>
+
+            <h2>
+              Topic Quiz
+            </h2>
+
+            <p>
+              Choose a subject and topic to focus your review.
+            </p>
+
+            <select
+              id="quizSubject"
+              onchange="updateQuizTopics()"
+            >
+
+              <option value="steel">
+                Steel Design
+              </option>
+
+              <option value="reinforcedConcrete">
+                Reinforced Concrete
+              </option>
+
+              <option value="prestressedConcrete">
+                Prestressed Concrete
+              </option>
+
+            </select>
+
+
+            <select id="quizTopic">
+            </select>
+
+
+            <button
+              class="primary-btn full-btn"
+              onclick="startTopicQuiz()"
+            >
+              Start Topic Quiz →
+            </button>
+
+          </div>
+
+
+          <div class="quiz-option-card featured-option">
+
+            <div class="quiz-option-icon">
+              🧪
+            </div>
+
+            <h2>
+              Quick Practice
+            </h2>
+
+            <p>
+              Get a randomized set of engineering questions.
+            </p>
+
+            <div class="quick-quiz-info">
+              <span>10 Questions</span>
+              <span>Mixed Topics</span>
+            </div>
+
+            <button
+              class="primary-btn full-btn"
+              onclick="startQuickQuiz()"
+            >
+              Start Quick Practice →
+            </button>
+
+          </div>
+
+
+          <div class="quiz-option-card">
+
+            <div class="quiz-option-icon">
+              🎯
+            </div>
+
+            <h2>
+              Smart Practice
+            </h2>
+
+            <p>
+              Let your performance determine what you should practice.
+            </p>
+
+            <button
+              class="secondary-btn full-btn"
+              onclick="showPage('adaptivePage')"
+            >
+              Open Smart Practice →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         QUIZ ACTIVE
+    ==================================================== -->
+
+    <section
+      id="quizActivePage"
+      class="page"
+    >
+
+      <div class="page-container quiz-active-container">
+
+        <div class="quiz-topbar">
+
+          <div>
+
+            <span
+              id="activeQuizTitle"
+              class="eyebrow"
+            >
+              QUIZ
+            </span>
+
+            <div
+              id="quizProgressText"
+              class="quiz-progress-text"
+            >
+              Question 1 of 10
+            </div>
+
+          </div>
+
+
+          <div
+            id="quizTimer"
+            class="quiz-timer"
+          >
+            10:00
+          </div>
+
+        </div>
+
+
+        <div class="quiz-progress-bar">
+
+          <div
+            id="quizProgressBar"
+            class="quiz-progress-fill"
+          ></div>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+          <div class="question-meta">
+
+            <span id="quizQuestionType">
+              MULTIPLE CHOICE
+            </span>
+
+            <span id="quizQuestionTopic">
+              Topic
+            </span>
+
+          </div>
+
+
+          <h2 id="quizQuestion">
+            Question goes here
+          </h2>
+
+
+          <div
+            id="quizOptions"
+            class="quiz-options"
+          >
+          </div>
+
+
+          <div
+            id="quizNumericInput"
+            class="numeric-answer hidden"
+          >
+
+            <label>
+              Enter your numerical answer
+            </label>
+
+            <input
+              id="numericAnswer"
+              type="number"
+              step="any"
+              placeholder="Your answer"
+            >
+
+          </div>
+
+
+          <div
+            id="quizIdentificationInput"
+            class="numeric-answer hidden"
+          >
+
+            <label>
+              Enter your answer
+            </label>
+
+            <input
+              id="identificationAnswer"
+              type="text"
+              placeholder="Type your answer"
+            >
+
+          </div>
+
+
+          <div class="quiz-navigation">
+
+            <button
+              id="quizPreviousBtn"
+              class="secondary-btn"
+              onclick="previousQuizQuestion()"
+            >
+              ← Previous
+            </button>
+
+
+            <button
+              id="quizNextBtn"
+              class="primary-btn"
+              onclick="nextQuizQuestion()"
+            >
+              Next →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         QUIZ RESULTS
+    ==================================================== -->
+
+    <section
+      id="quizResultsPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="results-hero">
+
+          <span class="eyebrow">
+            QUIZ COMPLETE
+          </span>
+
+          <h1>
+            Great work, future engineer! 🎉
+          </h1>
+
+          <div
+            id="quizScoreDisplay"
+            class="big-score"
+          >
+            0%
+          </div>
+
+          <p id="quizScoreSummary">
+            0 out of 0 correct
+          </p>
+
+        </div>
+
+
+        <div
+          id="quizResultsList"
+          class="results-list"
+        >
+        </div>
+
+
+        <div class="results-actions">
+
+          <button
+            class="primary-btn"
+            onclick="showPage('quizPage')"
+          >
+            Take Another Quiz
+          </button>
+
+          <button
+            class="secondary-btn"
+            onclick="showPage('coachPage')"
+          >
+            🧠 View My Analysis
+          </button>
+
+          <button
+            class="secondary-btn"
+            onclick="showPage('homePage')"
+          >
+            Back Home
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         STUDY COACH
+    ==================================================== -->
+
+    <section
+      id="coachPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              AI STUDY COACH
+            </span>
+
+            <h1>
+              Your Performance
+            </h1>
+
+            <p>
+              Understand where you're strong and where to focus next.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="primary-btn coach-analyze-btn"
+          onclick="runCoachAnalysis()"
+        >
+          🧠 Analyze My Performance
+        </button>
+
+
+        <div
+          id="coachOverview"
+          class="coach-section"
+        >
+        </div>
+
+
+        <div
+          id="subjectAnalysis"
+          class="coach-section"
+        >
+        </div>
+
+
+        <div class="coach-two-column">
+
+          <div
+            id="weakTopics"
+            class="coach-section"
+          >
+          </div>
+
+
+          <div
+            id="strongTopics"
+            class="coach-section"
+          >
+          </div>
+
+        </div>
+
+
+        <div
+          id="coachRecommendation"
+          class="coach-section"
+        >
+        </div>
+
+
+        <div
+          id="studyPlan"
+          class="coach-section"
+        >
+        </div>
+
+
+        <div class="danger-zone">
+
+          <h3>
+            Performance Data
+          </h3>
+
+          <p>
+            Reset quiz and performance history while keeping your profile.
+          </p>
+
+          <button
+            class="danger-btn"
+            onclick="resetPerformanceData()"
+          >
+            Reset Performance Data
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SMART PRACTICE
+    ==================================================== -->
+
+    <section
+      id="adaptivePage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              ADAPTIVE LEARNING
+            </span>
+
+            <h1>
+              Smart Practice 🎯
+            </h1>
+
+            <p>
+              Your practice adapts to the areas that need the most attention.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="adaptive-hero">
+
+          <div>
+
+            <span class="eyebrow">
+              PERSONALIZED PRACTICE
+            </span>
+
+            <h2>
+              Practice smarter, not just harder.
+            </h2>
+
+            <p>
+              Smart Practice looks at your quiz performance,
+              mistakes, and unanswered topics to create a focused
+              practice session.
+            </p>
+
+          </div>
+
+          <div class="adaptive-icon">
+            🎯
+          </div>
+
+        </div>
+
+
+        <div class="adaptive-settings">
+
+          <div class="setting-card">
+
+            <span>
+              QUESTIONS
+            </span>
+
+            <strong>
+              10
+            </strong>
+
+          </div>
+
+
+          <div class="setting-card">
+
+            <span>
+              TARGET
+            </span>
+
+            <strong>
+              80%
+            </strong>
+
+          </div>
+
+
+          <div class="setting-card">
+
+            <span>
+              PRIORITY TOPICS
+            </span>
+
+            <strong id="adaptiveTopicCount">
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="adaptivePriorityTopics"
+          class="priority-topic-list"
+        >
+        </div>
+
+
+        <button
+          class="primary-btn adaptive-start-btn"
+          onclick="startAdaptivePractice()"
+        >
+          🎯 Start Smart Practice
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         ENGINEERING EXAM MODE
+    ==================================================== -->
+
+    <section
+      id="examPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              EXAM SIMULATION
+            </span>
+
+            <h1>
+              Engineering Exam Mode
+            </h1>
+
+            <p>
+              Simulate a full structural engineering examination.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="exam-intro">
+
+          <div class="exam-icon">
+            🧪
+          </div>
+
+          <div>
+
+            <h2>
+              Structural Engineering Mock Examination
+            </h2>
+
+            <p>
+              Test yourself with randomized questions covering
+              Steel Design, Reinforced Concrete, and Prestressed Concrete.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="exam-info-grid">
+
+          <div>
+            <span>QUESTIONS</span>
+            <strong>Up to 50</strong>
+          </div>
+
+          <div>
+            <span>TIME</span>
+            <strong>30 Minutes</strong>
+          </div>
+
+          <div>
+            <span>FORMAT</span>
+            <strong>Mixed</strong>
+          </div>
+
+          <div>
+            <span>RESULT</span>
+            <strong>Instant</strong>
+          </div>
+
+        </div>
+
+
+        <div class="exam-rules">
+
+          <h3>
+            Before you begin
+          </h3>
+
+          <ul>
+            <li>Questions are randomized.</li>
+            <li>You may flag questions for review.</li>
+            <li>Your answers are saved during the exam.</li>
+            <li>The exam automatically submits when time expires.</li>
+            <li>Your result will be saved to your performance history.</li>
+          </ul>
+
+        </div>
+
+
+        <button
+          class="primary-btn exam-start-btn"
+          onclick="startEngineeringExam()"
+        >
+          🧪 Start Mock Examination
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         ACTIVE EXAM
+    ==================================================== -->
+
+    <section
+      id="examActivePage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="exam-topbar">
+
+          <div>
+
+            <span class="eyebrow">
+              MOCK EXAMINATION
+            </span>
+
+            <strong id="examQuestionNumber">
+              Question 1
+            </strong>
+
+          </div>
+
+
+          <div
+            id="examTimer"
+            class="exam-timer"
+          >
+            30:00
+          </div>
+
+        </div>
+
+
+        <div class="exam-layout">
+
+
+          <!-- Question -->
+
+          <div class="exam-question-area">
+
+            <div class="question-card">
+
+              <div class="question-meta">
+
+                <span id="examQuestionType">
+                  MULTIPLE CHOICE
+                </span>
+
+                <span id="examQuestionTopic">
+                  Topic
+                </span>
+
+              </div>
+
+
+              <h2 id="examQuestion">
+                Question
+              </h2>
+
+
+              <div
+                id="examOptions"
+                class="quiz-options"
+              >
+              </div>
+
+            </div>
+
+
+            <div class="exam-navigation">
+
+              <button
+                class="secondary-btn"
+                onclick="previousExamQuestion()"
+              >
+                ← Previous
+              </button>
+
+
+              <button
+                id="examFlagBtn"
+                class="secondary-btn"
+                onclick="toggleExamFlag()"
+              >
+                🚩 Flag
+              </button>
+
+
+              <button
+                class="primary-btn"
+                onclick="nextExamQuestion()"
+              >
+                Next →
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Answer Sheet -->
+
+          <aside class="answer-sheet">
+
+            <h3>
+              Answer Sheet
+            </h3>
+
+            <p>
+              Click a number to jump to a question.
+            </p>
+
+
+            <div
+              id="examAnswerSheet"
+              class="answer-sheet-grid"
+            >
+            </div>
+
+
+            <button
+              class="exam-submit-btn"
+              onclick="submitExam()"
+            >
+              Submit Examination
+            </button>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         EXAM RESULTS
+    ==================================================== -->
+
+    <section
+      id="examResultsPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="results-hero">
+
+          <span class="eyebrow">
+            EXAM COMPLETE
+          </span>
+
+          <h1>
+            Mock Examination Results
+          </h1>
+
+          <div
+            id="examScoreDisplay"
+            class="big-score"
+          >
+            0%
+          </div>
+
+          <p id="examScoreSummary">
+            0 out of 0 correct
+          </p>
+
+        </div>
+
+
+        <div
+          id="examResultsList"
+          class="results-list"
+        >
+        </div>
+
+
+        <div class="results-actions">
+
+          <button
+            class="primary-btn"
+            onclick="showPage('examPage')"
+          >
+            Take Another Exam
+          </button>
+
+          <button
+            class="secondary-btn"
+            onclick="showPage('coachPage')"
+          >
+            🧠 View Performance
+          </button>
+
+          <button
+            class="secondary-btn"
+            onclick="showPage('homePage')"
+          >
+            Back Home
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         AI ENGINEERING TUTOR
+    ==================================================== -->
+
+    <section
+      id="tutorPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              AI ENGINEERING TUTOR
+            </span>
+
+            <h1>
+              Learn. Solve. Understand.
+            </h1>
+
+            <p>
+              Your personal engineering study companion.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="tutor-hero">
+
+          <div class="tutor-avatar">
+            🤖
+          </div>
+
+          <div>
+
+            <span class="eyebrow">
+              HI, <span id="tutorStudentName">ENGINEER</span>
+            </span>
+
+            <h2>
+              What do you want to learn today?
+            </h2>
+
+            <p>
+              I can explain concepts, guide calculations,
+              check your work, and help you practice.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Tutor Modes -->
+
+        <div class="tutor-mode-grid">
+
+          <button
+            class="tutor-mode active"
+            data-mode="teach"
+            onclick="setTutorMode('teach', this)"
+          >
+            <span>📖</span>
+            <strong>Teach Me</strong>
+            <small>Explain a concept</small>
+          </button>
+
+
+          <button
+            class="tutor-mode"
+            data-mode="hint"
+            onclick="setTutorMode('hint', this)"
+          >
+            <span>💡</span>
+            <strong>Give Me a Hint</strong>
+            <small>Help without spoiling</small>
+          </button>
+
+
+          <button
+            class="tutor-mode"
+            data-mode="check"
+            onclick="setTutorMode('check', this)"
+          >
+            <span>✅</span>
+            <strong>Check My Work</strong>
+            <small>Find my mistake</small>
+          </button>
+
+
+          <button
+            class="tutor-mode"
+            data-mode="practice"
+            onclick="setTutorMode('practice', this)"
+          >
+            <span>📝</span>
+            <strong>Give Me a Problem</strong>
+            <small>Practice engineering</small>
+          </button>
+
+
+          <button
+            class="tutor-mode"
+            data-mode="mistakes"
+            onclick="setTutorMode('mistakes', this)"
+          >
+            <span>🔍</span>
+            <strong>My Mistakes</strong>
+            <small>Review weak areas</small>
+          </button>
+
+
+          <button
+            class="tutor-mode"
+            data-mode="guided"
+            onclick="setTutorMode('guided', this)"
+          >
+            <span>🪜</span>
+            <strong>Step-by-Step</strong>
+            <small>Let's solve it together</small>
+          </button>
+
+        </div>
+
+
+        <!-- Tutor Controls -->
+
+        <div class="tutor-workspace">
+
+          <div class="tutor-controls">
+
+
+            <div class="form-group">
+
+              <label for="tutorSubject">
+                Subject
+              </label>
+
+              <select
+                id="tutorSubject"
+                onchange="updateTutorTopics()"
+              >
+
+                <option value="steel">
+                  Steel Design
+                </option>
+
+                <option value="reinforcedConcrete">
+                  Reinforced Concrete
+                </option>
+
+                <option value="prestressedConcrete">
+                  Prestressed Concrete
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="tutorTopic">
+                Topic
+              </label>
+
+              <select id="tutorTopic">
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="tutorLevel">
+                Explanation Level
+              </label>
+
+              <select id="tutorLevel">
+
+                <option value="beginner">
+                  Beginner Friendly
+                </option>
+
+                <option
+                  value="standard"
+                  selected
+                >
+                  Standard Engineering
+                </option>
+
+                <option value="advanced">
+                  Advanced
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label id="tutorInputLabel">
+                What do you want to learn?
+              </label>
+
+              <textarea
+                id="tutorInput"
+                rows="8"
+                placeholder="Example: Explain how buckling affects a compression member."
+              ></textarea>
+
+            </div>
+
+
+            <button
+              class="primary-btn tutor-ask-btn"
+              onclick="runEngineeringTutor()"
+            >
+              🤖 Ask My Engineering Tutor
+            </button>
+
+          </div>
+
+
+          <!-- Tutor Response -->
+
+          <div
+            id="tutorResponse"
+            class="tutor-response"
+          >
+
+            <div class="tutor-empty">
+
+              <div class="tutor-empty-icon">
+                🤖
+              </div>
+
+              <h3>
+                Your tutor is ready.
+              </h3>
+
+              <p>
+                Choose a mode, select a topic,
+                and tell me what you're working on.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="tutor-disclaimer">
+
+          ⚠️ <strong>Engineering Study Tool:</strong>
+          This tutor is intended for learning and practice.
+          Always verify final design decisions, assumptions,
+          code provisions, and project-specific requirements
+          against the applicable standards and professional
+          engineering judgment.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FORMULA LIBRARY
+    ==================================================== -->
+
+    <section
+      id="formulaPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              ENGINEERING REFERENCE
+            </span>
+
+            <h1>
+              Formula Library
+            </h1>
+
+            <p>
+              Search useful engineering relationships and formulas.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="formula-toolbar">
+
+          <input
+            id="formulaSearch"
+            type="search"
+            placeholder="🔍 Search formulas..."
+            oninput="searchFormulas()"
+          />
+
+
+          <div class="formula-filters">
+
+            <button
+              class="formula-filter active"
+              onclick="filterFormulaCategory('all', this)"
+            >
+              All
+            </button>
+
+            <button
+              class="formula-filter"
+              onclick="filterFormulaCategory('steel', this)"
+            >
+              Steel
+            </button>
+
+            <button
+              class="formula-filter"
+              onclick="filterFormulaCategory('reinforcedConcrete', this)"
+            >
+              RC
+            </button>
+
+            <button
+              class="formula-filter"
+              onclick="filterFormulaCategory('prestressed', this)"
+            >
+              Prestressed
+            </button>
+
+            <button
+              class="formula-filter"
+              onclick="filterFormulaCategory('favorites', this)"
+            >
+              ⭐ Favorites
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="formulaGrid"
+          class="formula-grid"
+        >
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SOLVER PAGE
+    ==================================================== -->
+
+    <section
+      id="solverPage"
+      class="page"
+    >
+
+      <div class="page-container">
+
+        <div class="subpage-header">
+
+          <button
+            class="back-btn"
+            onclick="showPage('homePage')"
+          >
+            ← Back
+          </button>
+
+          <div>
+
+            <span class="eyebrow">
+              ENGINEERING PROBLEM SOLVER
+            </span>
+
+            <h1>
+              Solve It Step-by-Step
+            </h1>
+
+            <p>
+              Enter your engineering values and work through the calculation.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="solver-layout">
+
+          <div class="solver-input-card">
+
+            <div class="form-group">
+
+              <label>
+                Subject
+              </label>
+
+              <select
+                id="solverCategory"
+                onchange="updateSolverProblems()"
+              >
+
+                <option value="steel">
+                  Steel Design
+                </option>
+
+                <option value="reinforcedConcrete">
+                  Reinforced Concrete
+                </option>
+
+                <option value="prestressed">
+                  Prestressed Concrete
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Problem Type
+              </label>
+
+              <select id="solverProblem">
+              </select>
+
+            </div>
+
+
+            <div
+              id="solverInputs"
+              class="solver-inputs"
+            >
+            </div>
+
+
+            <button
+              class="primary-btn full-btn"
+              onclick="solveEngineeringProblem()"
+            >
+              📐 Solve Problem
+            </button>
+
+          </div>
+
+
+          <div
+            id="solverOutput"
+            class="solver-output"
+          >
+
+            <div class="solver-empty">
+
+              <div>
+                📐
+              </div>
+
+              <h3>
+                Engineering workspace
+              </h3>
+
+              <p>
+                Choose a problem type and enter the required values.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
